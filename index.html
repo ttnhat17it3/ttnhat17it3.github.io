@@ -5,24 +5,41 @@
     <script src="jquery.js"></script>
     <script src="peer.js"></script>
     <script src="socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css"></li>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
 
   <body>
     <div id="div-chat">
       <p>Online user:</p>
       <ul id="ulUser"></ul>
-      <h3 id="my-peer">Your ID:</h3>
-      <video id="localStream" width="300" controls></video>
-      <br /><br />
-      <video id="remoteStream" width="300" controls></video>
-      <br /><br />
+      <h5 id="my-peer">Your ID: </h5>
+      <div class="row">
+        <div class="col-md-3">
+          <video id="localStream" width="300" controls></video>
+          <!-- <br /><br /> -->
+        </div>  
+        <div class="col-md-3">
+          <video id="remoteStream" width="300" controls></video>
+          <!-- <br /><br /> -->
+        </div>
+      </div>
+    
       <input type="text" id="remoteId" placeholder="Remote ID" />
-      <button id="btnCall">Call</button>
+      <button id="btnCall" class="btn btn-success">Call</button>
     </div>
     <div id="div-dang-ky">
-      <br /><br />
-      <input type="text" id="txtUsername" placeholder="Enter your username" />
-      <button id="btnSignUp">Sign Up</button>
+      <!-- <br /><br /> -->
+      <h3>WebRTC</h3>
+      <div class="col-xs-2">
+        <label for="ex1">Please enter your username</label>
+        <input class="form-control" id="txtUsername" type="text">
+        <button id="btnSignUp" class="btn btn-default">Join</button>
+      </div>
+      <!-- <input type="text" id="txtUsername" placeholder="Enter your username"/> -->
+      
     </div>
   </body>
   <script src="main.js"></script>
